@@ -16,7 +16,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   label,
   onClick,
   color = 'primary',
-  size = md,
+  size = 'md',
   variant = 'filled',
   radius = 8,
   disabled = false,
