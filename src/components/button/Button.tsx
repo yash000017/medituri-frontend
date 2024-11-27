@@ -15,7 +15,7 @@ interface CustomButtonProps {
 const CustomButton: React.FC<CustomButtonProps> = ({
   label,
   onClick,
-  color = 'primary',
+  color = primary,
   size = md,
   variant = 'filled',
   radius = 8,
