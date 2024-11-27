@@ -1,5 +1,12 @@
 import axios from 'axios';
 
+const getCookie = (name: string) => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(';').shift();
+  return undefined;
+};
+
 const axiosInstance = axios.create({
   baseURL: 'http://127.0.0.1:8000/api', // Set your base URL here
   timeout: 10000, // Set timeout in ms
@@ -11,11 +18,13 @@ const axiosInstance = axios.create({
 // You can add interceptors for requests or responses here if needed
 axiosInstance.interceptors.request.use(
   (config) => {
-    // Modify the request here if needed (e.g., add authorization token)
-    const token = localStorage.getItem('token'); // Example for token-based auth
+    // Get the token from the cookies
+    const token = getCookie('token'); // Replace 'token' with the actual cookie name
+
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;
     }
+
     return config;
   },
   (error) => {
