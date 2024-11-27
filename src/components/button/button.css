@@ -1,0 +1,60 @@
+/* Base styles for the button */
+.custom-button {
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Variants */
+  .custom-button--filled {
+    color: #ffffff;
+  }
+  
+  .custom-button--outline {
+    background-color: transparent;
+    border: 2px solid currentColor;
+  }
+  
+  .custom-button--light {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Color variants */
+  .custom-button--primary {
+    background-color: #1976d2;
+  }
+  
+  .custom-button--primary:hover {
+    background-color: #1565c0;
+  }
+  
+  .custom-button--secondary {
+    background-color: #9c27b0;
+  }
+  
+  .custom-button--secondary:hover {
+    background-color: #7b1fa2;
+  }
+  
+  .custom-button--dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .custom-button--dark:hover {
+    background-color: #000;
+  }
+  
+  .custom-button--light:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Disabled state */
+  .custom-button:disabled {
+    background-color: #d3d3d3;
+    color: #8c8c8c;
+    cursor: not-allowed;
+  }
+  
