@@ -1,12 +1,12 @@
-import CustomButton from '../../components/button/Button';
+import CustomButton from "../../components/button/Button";
 
 const ExampleComponent = () => {
   const handleButtonClick = () => {
-    alert('Button clicked!');
+    alert("Button clicked!");
   };
 
   return (
-    <div>
+    <div style={{ display: "flex", gap: "20px" }}>
       <CustomButton
         label="Primary Button"
         onClick={handleButtonClick}
@@ -17,17 +17,19 @@ const ExampleComponent = () => {
       <CustomButton
         label="Secondary Button"
         onClick={handleButtonClick}
-        color="secondary"
+        color="warning"
         size="sm"
-        variant="outline"
+        variant="filled"
         radius={12}
       />
+
       <CustomButton
-        label="Disabled Button"
-        disabled
-        color="dark"
-        size="lg"
-        variant="light"
+        label="Primary Button"
+        onClick={() => alert("Clicked!")}
+        color="success"
+        size="sm"
+        variant="filled"
+        radius={12}
       />
     </div>
   );
