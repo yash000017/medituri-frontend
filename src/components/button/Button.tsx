@@ -24,7 +24,9 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const theme = useMantineTheme(); // Access the Mantine theme
 
   // Optional: You can log the theme or specific colors for debugging
-  console.log("Theme colors:", theme.colors);
+  console.log('Theme colors:', theme.colors);
+
+  console.log(theme.defaultRadius);
 
   return (
     <Button
@@ -33,12 +35,14 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       variant={variant}
       onClick={onClick}
       size={size}
-      radius={radius}
+      radius={theme.defaultRadius}
       disabled={disabled}
       style={{
         // Example of using theme values directly
-        padding: `${theme.spacing.sm} ${theme.spacing.md}`, // Custom padding using theme spacing
-        backgroundColor: variant === 'filled' ? theme.colors[color][6] : undefined, // Example for filled variant
+        borderRadius: radius,
+        // padding: `${theme.spacing.md} ${theme.spacing.md}`, // Custom padding using theme spacing
+        backgroundColor:
+          variant === 'filled' ? theme.colors[color][6] : undefined, // Example for filled variant
         borderColor: variant === 'outline' ? theme.colors[color][6] : undefined, // Example for outline variant
       }}
     >

@@ -1,7 +1,7 @@
-import { MantineThemeOverride } from '@mantine/core';
+import { createTheme } from '@mantine/core';
 import components from './theme-components';
 
-const customTheme: MantineThemeOverride = {
+const theme = createTheme({
   fontFamily: 'Arial, sans-serif',
   headings: {
     fontFamily: 'Arial, sans-serif',
@@ -17,16 +17,52 @@ const customTheme: MantineThemeOverride = {
   },
   colors: {
     primary: [
-      '#E7F3FA', '#CDE8F7', '#A9D9F2', '#82C8EB', '#4FAEE3', '#1976D2', '#0F5EA5', '#093F78', '#062B52', '#041C39',
+      '#E7F3FA',
+      '#CDE8F7',
+      '#A9D9F2',
+      '#82C8EB',
+      '#4FAEE3',
+      '#1976D2',
+      '#0F5EA5',
+      '#093F78',
+      '#062B52',
+      '#041C39',
     ],
     secondary: [
-      '#FDECE2', '#FBD6C7', '#F9B89B', '#F59169', '#F06A37', '#E74800', '#B43A00', '#862B00', '#5A1D00', '#3C1300',
+      '#FDECE2',
+      '#FBD6C7',
+      '#F9B89B',
+      '#F59169',
+      '#F06A37',
+      '#E74800',
+      '#B43A00',
+      '#862B00',
+      '#5A1D00',
+      '#3C1300',
     ],
     dark: [
-      '#ECEFF1', '#CFD8DC', '#B0BEC5', '#90A4AE', '#78909C', '#607D8B', '#455A64', '#37474F', '#263238', '#1C1F21',
+      '#ECEFF1',
+      '#CFD8DC',
+      '#B0BEC5',
+      '#90A4AE',
+      '#78909C',
+      '#607D8B',
+      '#455A64',
+      '#37474F',
+      '#263238',
+      '#1C1F21',
     ],
     light: [
-      '#FFFFFF', '#FAFAFA', '#F5F5F5', '#EEEEEE', '#E0E0E0', '#CCCCCC', '#B3B3B3', '#999999', '#666666', '#333333',
+      '#FFFFFF',
+      '#FAFAFA',
+      '#F5F5F5',
+      '#EEEEEE',
+      '#E0E0E0',
+      '#CCCCCC',
+      '#B3B3B3',
+      '#999999',
+      '#666666',
+      '#333333',
     ],
   },
   primaryColor: 'primary',
@@ -60,16 +96,16 @@ const customTheme: MantineThemeOverride = {
     xs: '480',
     sm: '768',
     md: '1024',
-    lg: '1200', 
-    xl: '1440', 
+    lg: '1200',
+    xl: '1440',
   },
   spacing: {
-    xs: '4',
-    sm: '8',
-    md: '16',
-    lg: '32', 
-    xl: '64',
+    xs: '4px',
+    sm: '8px',
+    md: '16px',
+    lg: '32px',
+    xl: '64px',
   },
-};
+});
 
-export default customTheme;
+export default theme;
