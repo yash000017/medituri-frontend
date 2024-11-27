@@ -12,14 +12,25 @@
       "jsx": true
     },
     "ecmaVersion": 2021,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "no-console": "error",
-    "no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
     "prettier/prettier": "error",
-    "max-len": ["error", { "code": 100 }],
-    "@typescript-eslint/no-unused-vars": "warn"
+    "react/react-in-jsx-scope": "off", // React 17 JSX transform (not needed anymore)
+    "react/jsx-uses-react": "off", // React 17 JSX transform (not needed anymore)
+    "react/jsx-uses-vars": "warn",
+    "max-len": ["error", { "code": 80 }],
+    "no-console": "warn", // Warn if console statements are used
+    "no-unused-vars": "warn", // Warn about unused variables
+    "react/prop-types": "off", // Disable prop types for TypeScript users
+    "react-hooks/rules-of-hooks": "error", // Enforce hooks rules
+    "react-hooks/exhaustive-deps": "warn" // Warn if hooks dependencies are not set
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect the React version
+    }
   }
 }
