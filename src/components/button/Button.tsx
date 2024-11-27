@@ -40,7 +40,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       style={{
         // Example of using theme values directly
         borderRadius: radius,
-        // padding: `${theme.spacing.md} ${theme.spacing.md}`, // Custom padding using theme spacing
+        padding: `${theme.spacing.md} ${theme.spacing.md}`, // Custom padding using theme spacing
         backgroundColor:
           variant === 'filled' ? theme.colors[color][6] : undefined, // Example for filled variant
         borderColor: variant === 'outline' ? theme.colors[color][6] : undefined, // Example for outline variant
