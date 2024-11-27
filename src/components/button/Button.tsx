@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@mantine/core';
-import './button.css'; // Import the CSS file for styling
+import './button.css';
 
 interface CustomButtonProps {
   label: string;
