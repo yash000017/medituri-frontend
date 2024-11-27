@@ -24,7 +24,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   console.log('color', color);
   return (
     <Button
-      //   className={`custom-button custom-button--${color} custom-button--${variant}`}
       color={color}
       variant={variant}
       onClick={onClick}
